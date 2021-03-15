@@ -1,0 +1,32 @@
+﻿@using ProductBacklog.Web.Models
+@model List<HistoriaUsuario>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>..... </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Observacion</th>
+            <th scope="col">Descriccio</th>
+            <th scope="col">estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var historia in Model)
+        {
+        <tr>
+            <th scope="row">1</th>
+            <td>@historia.Id</td>
+            <td>@historia.Observacion</td>
+            <td>@historia.Descripcion</td>
+            <td>@historia.Estado</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

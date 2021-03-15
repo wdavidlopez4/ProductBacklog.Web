@@ -1,0 +1,28 @@
+﻿@using ProductBacklog.Web.Models
+@model HistoriaUsuario
+@{
+    ViewData["Title"] = "Guardar";
+}
+
+<h1>Guardar</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Descripcion" class="control-label"></label>
+        <input asp-for="@Model.Descripcion" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Observacion" class="control-label"></label>
+        <input asp-for="@Model.Observacion" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Estado" class="control-label"></label>
+        <input asp-for="@Model.Estado" type="number" class="form-control" />
+    </div>
+
+    <div class="col-sm">
+        <input asp-controller="HistoriaUsuario" asp-action="Guardar" type="submit" value="guardar" class="btn btn-outline-dark" />
+    </div>
+</form>
